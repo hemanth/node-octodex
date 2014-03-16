@@ -7,7 +7,13 @@ Install the module with: `npm install octodex`
 
 ```javascript
 var cat = require('octodex');
-cat.octodex(); // Will result in a random link.
+
+cat(function(err,url){
+    if(!err){
+        console.log(url); 
+       // This will give a random img url.
+    }
+});
 ```
 
 ## License

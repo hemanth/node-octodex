@@ -1,25 +1,17 @@
-/*
- * octodex
- * https://github.com/hemanth/octodex
- *
- * Copyright (c) 2013 Hemanth.HM
- * Licensed under the MIT license.
- */
+var request = require('request');
+var cheerio = require('cheerio');
+var url = 'http://octodex.github.com';
 
-var jsdom = require("jsdom");
+var img = function img(cb){ 
+  request(url, function (error, response, html) {
+    if (!error && response.statusCode == 200) {
+      var $ = cheerio.load(html);
+      var imgs = $('a.preview-image > img');
+      cb(null,url + imgs[Math.floor(Math.random() * (imgs.length))].data.src);
+    } else {
+      cb(error,response.statusCode);
+    }
+  });
+}
 
-exports.octodex = function() {
-  jsdom.env(
-  "http://octodex.github.com/",
-  ["http://code.jquery.com/jquery.js"],
-  function (errors, window) {
-    $ = window.$;
-    imgs = [];
-    $("a.preview-image > img").each(function() {
-        imgs.push($(this).attr('data-src'));
-    });
-    console.log(imgs[Math.floor(Math.random()*imgs.length)]);
-  }
-);  
-};
-
+module.exports = {img: img};

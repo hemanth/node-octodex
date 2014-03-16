@@ -2,7 +2,7 @@
   "name": "octodex",
   "description": "Get random octodex img URLs.",
   "version": "0.1.0",
-  "homepage": "https://github.com/hemanth/octodex",
+  "homepage": "https://github.com/hemanth/node-octodex",
   "author": {
     "name": "Hemanth.HM",
     "email": "hemanth.hm@gmail.com",
@@ -10,23 +10,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hemanth/octodex.git"
+    "url": "git://github.com/hemanth/node-octodex.git"
   },
   "bugs": {
-    "url": "https://github.com/hemanth/octodex/issues"
+    "url": "https://github.com/hemanth/node-octodex/issues"
   },
   "dependencies": {
-    "jsdom": ">=0.5.0"
+    "request": "^2.34.0",
+    "cheerio": "^0.13.1"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/hemanth/octodex/blob/master/LICENSE-MIT"
+      "url": "https://github.com/hemanth/node-octodex/blob/master/LICENSE-MIT"
     }
   ],
   "main": "octodex.js",
   "engines": {
     "node": ">= 0.6.0"
   },
-  "keywords": ["github","random","images","octodex","cats"]
+  "keywords": [
+    "github",
+    "random",
+    "images",
+    "octodex",
+    "cats"
+  ]
 }
