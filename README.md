@@ -8,7 +8,7 @@ Install the module with: `npm install octodex`
 ```javascript
 var cat = require('octodex');
 
-cat(function(err,url){
+cat.img(function(err,url){
     if(!err){
         console.log(url); 
        // This will give a random img url.
