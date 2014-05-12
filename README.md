@@ -22,7 +22,7 @@ Using it, he will perform the parce only once. making the other invocations fast
 ```javascript
 var cat = require('octodex');
 
-cat(function(err,url){
+cat.img(function(err,url){
     if(!err){
         console.log(url); 
        // This will give a random img url.
