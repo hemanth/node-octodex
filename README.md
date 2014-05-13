@@ -16,6 +16,20 @@ cat.img(function(err,url){
 });
 ```
 
+You can also pass the second parameter indicating to the module to do in memory cache of the parsed content.
+Using it, he will perform the parce only once. making the other invocations faster.
+
+```javascript
+var cat = require('octodex');
+
+cat.img(function(err,url){
+    if(!err){
+        console.log(url); 
+       // This will give a random img url.
+    }
+}, true);
+```
+
 ## License
 Copyright (c) 2013 Hemanth.HM  
 Licensed under the MIT license.
