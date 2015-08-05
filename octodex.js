@@ -24,7 +24,7 @@ var loadImages = function(cb, useCache) {
     cb(null, imgs);
   } else {
     parsePage(function(error, imgs) {
-      if (!error && useCache) 
+      if (!error && useCache)
         cache.put(cacheKey, imgs, cacheTimeout);
 
       cb(error, imgs);
@@ -32,10 +32,10 @@ var loadImages = function(cb, useCache) {
   }
 };
 
-var img = function img(cb, useCache){ 
+var img = function img(cb, useCache){
   loadImages(function(error, imgs) {
-    if (!error) 
-      cb(null, url + imgs[Math.floor(Math.random() * (imgs.length))].data.src);
+    if (!error)
+      cb(null, url + imgs[Math.floor(Math.random() * (imgs.length))].attribs['data-src']);
     else
       cb(error);
   }, useCache);
