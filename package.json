@@ -1,7 +1,7 @@
 {
   "name": "octodex",
   "description": "Get random octodex img URLs.",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/hemanth/node-octodex",
   "author": {
     "name": "Hemanth.HM",
@@ -9,7 +9,7 @@
     "url": "http://h3manth.com"
   },
   "scripts": {
-    "test" : "mocha"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
