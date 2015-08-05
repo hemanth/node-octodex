@@ -1,4 +1,4 @@
-# octodex
+# octodex [![Build Status](https://travis-ci.org/hemanth/node-octodex.svg)](https://travis-ci.org/hemanth/node-octodex)
 
 Get random octodex img URLs.
 
@@ -10,7 +10,7 @@ var cat = require('octodex');
 
 cat.img(function(err,url){
     if(!err){
-        console.log(url); 
+        console.log(url);
        // This will give a random img url.
     }
 });
@@ -24,7 +24,7 @@ var cat = require('octodex');
 
 cat.img(function(err,url){
     if(!err){
-        console.log(url); 
+        console.log(url);
        // This will give a random img url.
     }
 }, true);
