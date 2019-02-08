@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "request": "^2.48.0",
-    "cheerio": "^0.18.0",
+    "cheerio": "^0.20.0",
     "memory-cache": "0.0.5"
   },
   "licenses": [
